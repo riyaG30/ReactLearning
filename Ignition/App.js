@@ -1,15 +1,16 @@
-
+import React from "react";
+import ReactDOM from "react-dom/client"
 
 
 //React.createElement is a JS Object
 const heading = React.createElement(
     "div", //Which element is to be created?
     {id : "parent"}, //Setting attributes to the element created
-    React.createElement("div", {id : "child"}, 
+    React.createElement("div", {id : "child" , key:"first"}, 
     //children elements 
-    [React.createElement("h1", {}, "I'm a h1 tag from react sibling"),
+    [React.createElement("h1", { key:"first"}, "I'm a h1 tag from react sibling"),
           // these 2 are silblings, and are sent as array of elememts (that is objects)
-    React.createElement("h2", {}, "I'm a h2 tag from react sibling ")])
+    React.createElement("h2", { key:"fsrst"}, "I'm a h2 tag from react sibling ")])
 );//what to display?
 
 //Rendering react
